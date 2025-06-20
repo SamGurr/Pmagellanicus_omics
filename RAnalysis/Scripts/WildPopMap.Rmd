@@ -1,0 +1,66 @@
+---
+title: "WildPopsMap"
+author: "Samuel Gurr"
+date: "2025-06-04"
+output: html_document
+---
+
+## Objective: 
+
+  * build a visual for the  lat and long for Atlantic sea scallop collections in May 2025
+  
+  * collections carried out by Mike Marchetti, Madison Meier (Hurricane Island), and Jason Robinson (Downeast Institute) 
+  
+```{r load libraries}
+library(ggplot2)
+library(ggmap)
+library(sf)
+library(mapview)
+```
+
+## Coordinates
+
+```{r coordinates dataframe}
+
+Latitude <- c(40.548200, # MAB 
+           41.0430, # MAB
+           40.32805, # lightship west
+           44.033205, # Buzz bed HI
+           44.058127, # Crane HI
+           44.03360, # West Little, HI
+           44.896511) # Cobscook Bay
+  
+Longitude <- c(-71.365300, # MAB 
+          -71.2325, # MAB 
+          -69.45680, # lightship west
+          -68.8842368, # Buzz bed HI
+          -68.894421, # Crane HI
+          -68.904339, # West Little, HI
+          -67.067669) # Cobscook Bay
+
+coord_df <- as.data.frame(cbind(Longitude,Latitude))
+
+
+Latitude_HI <- c(44.033205, # Buzz bed HI
+                 44.058127, # Crane HI
+                 44.03360) # West Little, HI
+
+Longitude_HI <- c(-68.8842368, # Buzz bed HI
+                  -68.894421, # Crane HI
+                  -68.904339) # West Little, HI
+
+coord_df_HI <- as.data.frame(cbind(Latitude_HI,Longitude_HI))
+
+```
+
+## PLot 'em!
+
+```{r plot map}
+# plot all of the sites
+All_sites       <- mapview(coord_df, xcol = "Longitude", ycol = "Latitude", crs = 4269, grid = FALSE)
+# notice that the three hurricane island beds are quite close, make a blowup map below
+Hurricane_sites <- mapview(coord_df_HI, xcol = "Longitude_HI", ycol = "Latitude_HI", crs = 4269, grid = FALSE)
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
