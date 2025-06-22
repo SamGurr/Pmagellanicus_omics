@@ -1,0 +1,67 @@
+﻿Date,Calib.Date,Lab,Time,Sample.ID,Treatment,Temperature,pH,Salinity,DO,Instrument,Notes
+20250523,NA,Ecology,NA,NA,raw water,8,7.84,31.31,9.65,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
+20250524,NA,Ecology,NA,NA,raw water,7.8,7.81,31.16,9.75,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
+20250525,NA,Ecology,NA,NA,raw water,8.4,7.83,31.14,9.75,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
+20250526,NA,Ecology,NA,NA,raw water,8.2,7.84,31.14,9.9,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
+20250527,NA,Ecology,NA,NA,raw water,9.1,7.86,31.37,9.84,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
+20250528,NA,Ecology,NA,NA,raw water,9.7,7.93,31.13,10.01,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
+20250529,NA,Ecology,NA,NA,raw water,10.8,7.99,31.09,9.88,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
+20250530,NA,Ecology,NA,NA,raw water,10.4,7.92,31.18,9.77,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
+20250531,NA,Ecology,NA,NA,raw water,9.9,7.94,30.83,9.96,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
+20250601,NA,Ecology,NA,NA,raw water,10,7.8,31.2,9.48,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
+20250602,NA,Ecology,NA,NA,raw water,10,7.85,31.16,9.62,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
+20250603,NA,Ecology,NA,NA,raw water,9.9,7.9,30.7,9.86,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
+20250604,NA,Ecology,NA,NA,raw water,9.7,7.91,31.34,9.99,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
+20250605,NA,Ecology,NA,NA,raw water,9.6,7.88,31.41,9.92,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
+20250606,NA,Ecology,NA,NA,raw water,10.2,7.93,31.25,9.9,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
+20250607,NA,Ecology,NA,NA,raw water,10.1,7.88,31.36,9.94,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
+20250608,NA,Ecology,NA,NA,raw water,9.5,7.83,31.54,9.9,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
+20250609,NA,Ecology,NA,NA,raw water,10.3,7.89,31.45,9.89,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
+20250615,,OA,7:00 AM,1,HighOA_LowTemp,9.1,7.53,NA,NA,Oakton pH 450,
+20250615,,OA,7:00 AM,2,HighOA_HighTemp,11.8,7.5,NA,NA,Oakton pH 450,
+20250615,,OA,7:00 AM,3,LowOA_HighTemp,11.7,7.45,NA,NA,Oakton pH 450,
+20250615,,OA,7:00 AM,4,LowOA_LowTemp,9.1,7.45,NA,NA,Oakton pH 450,
+20250615,,OA,7:00 AM,5,HighOA_HighTemp,11.7,7.43,NA,NA,Oakton pH 450,
+20250615,,OA,7:00 AM,6,LowOA_LowTemp,9.1,7.61,NA,NA,Oakton pH 450,
+20250615,,OA,7:00 AM,7,HighOA_LowTemp,8.7,7.53,NA,NA,Oakton pH 450,
+20250615,,OA,7:00 AM,8,LowOA_HighTemp,11.4,7.58,NA,NA,Oakton pH 450,
+20250615,,OA,7:00 AM,9,LowOA_HighTemp,11.8,7.48,NA,NA,Oakton pH 450,
+20250615,,OA,7:00 AM,10,LowOA_HighTemp,11.7,7.41,NA,NA,Oakton pH 450,
+20250615,,OA,7:00 AM,11,LowOA_LowTemp,8.8,7.62,NA,NA,Oakton pH 450,
+20250615,,OA,7:00 AM,12,HighOA_HighTemp,11.8,7.58,NA,NA,Oakton pH 450,
+20250615,,OA,7:00 AM,13,HighOA_HighTemp,11.5,7.61,NA,NA,Oakton pH 450,
+20250615,,OA,7:00 AM,14,HighOA_LowTemp,8.9,7.59,NA,NA,Oakton pH 450,
+20250615,,OA,7:00 AM,15,LowOA_LowTemp,8.8,7.68,NA,NA,Oakton pH 450,
+20250615,,OA,7:00 AM,16,HighOA_LowTemp,8.8,7.64,NA,NA,Oakton pH 450,
+20250616,,OA,8:30 AM,1,HighOA_LowTemp,9.3,7.64,NA,NA,"Oakton pH 450, YSI",
+20250616,,OA,8:30 AM,2,HighOA_HighTemp,12.7,7.39,NA,NA,"Oakton pH 450, YSI",
+20250616,,OA,8:30 AM,3,LowOA_HighTemp,12.9,7.42,NA,NA,"Oakton pH 450, YSI",
+20250616,,OA,8:30 AM,4,LowOA_LowTemp,9.2,7.52,NA,NA,"Oakton pH 450, YSI",
+20250616,,OA,8:30 AM,5,HighOA_HighTemp,12.7,7.45,NA,NA,"Oakton pH 450, YSI",
+20250616,,OA,8:30 AM,6,LowOA_LowTemp,9,7.58,NA,NA,"Oakton pH 450, YSI",
+20250616,,OA,8:30 AM,7,HighOA_LowTemp,8.7,7.63,NA,NA,"Oakton pH 450, YSI",
+20250616,,OA,8:30 AM,8,LowOA_HighTemp,12.6,7.55,NA,NA,"Oakton pH 450, YSI",
+20250616,,OA,8:30 AM,9,LowOA_HighTemp,12.8,7.51,NA,NA,"Oakton pH 450, YSI",
+20250616,,OA,8:30 AM,10,LowOA_HighTemp,12.7,7.45,NA,NA,"Oakton pH 450, YSI",
+20250616,,OA,8:30 AM,11,LowOA_LowTemp,8.8,7.59,NA,NA,"Oakton pH 450, YSI",
+20250616,,OA,8:30 AM,12,HighOA_HighTemp,12.9,7.58,NA,NA,"Oakton pH 450, YSI",
+20250616,,OA,8:30 AM,13,HighOA_HighTemp,12.5,7.72,NA,NA,"Oakton pH 450, YSI",
+20250616,,OA,8:30 AM,14,HighOA_LowTemp,8.8,7.69,NA,NA,"Oakton pH 450, YSI",
+20250616,,OA,8:30 AM,15,LowOA_LowTemp,8.8,7.68,NA,NA,"Oakton pH 450, YSI",
+20250616,,OA,8:30 AM,16,HighOA_LowTemp,8.9,7.71,NA,NA,"Oakton pH 450, YSI",
+20250621,20250621,OA,10:00,1,HighOA_LowTemp,9.6,7.52,31.2,NA,Oakton pH 450,
+20250621,20250621,OA,10:00,2,HighOA_HighTemp,14.7,7.52,31.2,NA,Oakton pH 450,
+20250621,20250621,OA,10:00,3,LowOA_HighTemp,14.8,7.69,31.2,NA,Oakton pH 450,
+20250621,20250621,OA,10:00,4,LowOA_LowTemp,9.5,7.68,31.2,NA,Oakton pH 450,
+20250621,20250621,OA,10:00,5,HighOA_HighTemp,14.8,7.55,31.2,NA,Oakton pH 450,
+20250621,20250621,OA,10:00,6,LowOA_LowTemp,9.4,7.74,31.2,NA,Oakton pH 450,
+20250621,20250621,OA,10:00,7,HighOA_LowTemp,9.2,7.51,31.2,NA,Oakton pH 450,
+20250621,20250621,OA,10:00,8,LowOA_HighTemp,14.6,7.67,31.2,NA,Oakton pH 450,
+20250621,20250621,OA,10:00,9,LowOA_HighTemp,14.6,7.7,31.2,NA,Oakton pH 450,
+20250621,20250621,OA,10:00,10,LowOA_HighTemp,14.6,7.67,31.2,NA,Oakton pH 450,
+20250621,20250621,OA,10:00,11,LowOA_LowTemp,9.1,7.66,31.2,NA,Oakton pH 450,
+20250621,20250621,OA,10:00,12,HighOA_HighTemp,14.8,7.58,31.2,NA,Oakton pH 450,
+20250621,20250621,OA,10:00,13,HighOA_HighTemp,14.5,7.56,31.2,NA,Oakton pH 450,
+20250621,20250621,OA,10:00,14,HighOA_LowTemp,8.9,7.54,31.2,NA,Oakton pH 450,
+20250621,20250621,OA,10:00,15,LowOA_LowTemp,8.9,7.66,31.2,NA,Oakton pH 450,
+20250621,20250621,OA,10:00,16,HighOA_LowTemp,8.9,7.51,31.2,NA,Oakton pH 450,
