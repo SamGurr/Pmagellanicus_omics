@@ -80,13 +80,17 @@ F <- 96485.339924 #Faraday constant in coulombs mol-1
 ```{r load discrete chem probe data}
 
 #read in probe measurements of pH, temperature, and salinity from tanks
-daily <- read.csv("Daily_Temp_pH_Sal.csv", header=TRUE, sep=",", na.strings="NA") %>% #load data with a header, separated by commas, with NA as NA
+daily <- read.csv("Daily_Temp_pH_Sal.csv", header=TRUE, sep=",", na.strings="NA") 
+
+daily <- daily[!is.na(daily$Temperature),] %>%
+          dplyr::mutate(Temperature = as.numeric(Temperature)) %>% 
+          #load data with a header, separated by commas, with NA as NA
           # convert (not not recorded in mV already!) pH to millivots
           # at 25C the conversion is pHmV = 59.16 * (7 - pH_NBS)
           # at all  other temperatures.. pHmV = (((2.303 * R * Kelvin) / F) *1000) * (7 - pH_NBS)
           dplyr::mutate(pH.MV = 
-                          case_when( (pH > 6.0 & pH < 8.0) ~ 
-                                       (((2.303 * R * (Temperature+273.15)) / F)*1000) * (7 - pH),
+                          case_when( (as.numeric(pH) > 6.0 & as.numeric(pH) < 8.0) ~ 
+                                       (((2.303 * R * (as.numeric(Temperature)+273.15)) / F)*1000) * (7 - as.numeric(pH)),
                                      TRUE ~ pH))
 
 ```

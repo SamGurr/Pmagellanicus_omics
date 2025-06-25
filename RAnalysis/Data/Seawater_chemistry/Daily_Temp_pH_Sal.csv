@@ -17,51 +17,227 @@
 20250607,NA,Ecology,NA,NA,raw water,10.1,7.88,31.36,9.94,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
 20250608,NA,Ecology,NA,NA,raw water,9.5,7.83,31.54,9.9,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
 20250609,NA,Ecology,NA,NA,raw water,10.3,7.89,31.45,9.89,YSI,"acclimation period, holding Cobscook and Hurricane wild scallops in raw flow through"
-20250615,,OA,7:00 AM,1,HighOA_LowTemp,9.1,7.53,NA,NA,Oakton pH 450,
-20250615,,OA,7:00 AM,2,HighOA_HighTemp,11.8,7.5,NA,NA,Oakton pH 450,
-20250615,,OA,7:00 AM,3,LowOA_HighTemp,11.7,7.45,NA,NA,Oakton pH 450,
-20250615,,OA,7:00 AM,4,LowOA_LowTemp,9.1,7.45,NA,NA,Oakton pH 450,
-20250615,,OA,7:00 AM,5,HighOA_HighTemp,11.7,7.43,NA,NA,Oakton pH 450,
-20250615,,OA,7:00 AM,6,LowOA_LowTemp,9.1,7.61,NA,NA,Oakton pH 450,
-20250615,,OA,7:00 AM,7,HighOA_LowTemp,8.7,7.53,NA,NA,Oakton pH 450,
-20250615,,OA,7:00 AM,8,LowOA_HighTemp,11.4,7.58,NA,NA,Oakton pH 450,
-20250615,,OA,7:00 AM,9,LowOA_HighTemp,11.8,7.48,NA,NA,Oakton pH 450,
-20250615,,OA,7:00 AM,10,LowOA_HighTemp,11.7,7.41,NA,NA,Oakton pH 450,
-20250615,,OA,7:00 AM,11,LowOA_LowTemp,8.8,7.62,NA,NA,Oakton pH 450,
-20250615,,OA,7:00 AM,12,HighOA_HighTemp,11.8,7.58,NA,NA,Oakton pH 450,
-20250615,,OA,7:00 AM,13,HighOA_HighTemp,11.5,7.61,NA,NA,Oakton pH 450,
-20250615,,OA,7:00 AM,14,HighOA_LowTemp,8.9,7.59,NA,NA,Oakton pH 450,
-20250615,,OA,7:00 AM,15,LowOA_LowTemp,8.8,7.68,NA,NA,Oakton pH 450,
-20250615,,OA,7:00 AM,16,HighOA_LowTemp,8.8,7.64,NA,NA,Oakton pH 450,
-20250616,,OA,8:30 AM,1,HighOA_LowTemp,9.3,7.64,NA,NA,"Oakton pH 450, YSI",
-20250616,,OA,8:30 AM,2,HighOA_HighTemp,12.7,7.39,NA,NA,"Oakton pH 450, YSI",
-20250616,,OA,8:30 AM,3,LowOA_HighTemp,12.9,7.42,NA,NA,"Oakton pH 450, YSI",
-20250616,,OA,8:30 AM,4,LowOA_LowTemp,9.2,7.52,NA,NA,"Oakton pH 450, YSI",
-20250616,,OA,8:30 AM,5,HighOA_HighTemp,12.7,7.45,NA,NA,"Oakton pH 450, YSI",
-20250616,,OA,8:30 AM,6,LowOA_LowTemp,9,7.58,NA,NA,"Oakton pH 450, YSI",
-20250616,,OA,8:30 AM,7,HighOA_LowTemp,8.7,7.63,NA,NA,"Oakton pH 450, YSI",
-20250616,,OA,8:30 AM,8,LowOA_HighTemp,12.6,7.55,NA,NA,"Oakton pH 450, YSI",
-20250616,,OA,8:30 AM,9,LowOA_HighTemp,12.8,7.51,NA,NA,"Oakton pH 450, YSI",
-20250616,,OA,8:30 AM,10,LowOA_HighTemp,12.7,7.45,NA,NA,"Oakton pH 450, YSI",
-20250616,,OA,8:30 AM,11,LowOA_LowTemp,8.8,7.59,NA,NA,"Oakton pH 450, YSI",
-20250616,,OA,8:30 AM,12,HighOA_HighTemp,12.9,7.58,NA,NA,"Oakton pH 450, YSI",
-20250616,,OA,8:30 AM,13,HighOA_HighTemp,12.5,7.72,NA,NA,"Oakton pH 450, YSI",
-20250616,,OA,8:30 AM,14,HighOA_LowTemp,8.8,7.69,NA,NA,"Oakton pH 450, YSI",
-20250616,,OA,8:30 AM,15,LowOA_LowTemp,8.8,7.68,NA,NA,"Oakton pH 450, YSI",
-20250616,,OA,8:30 AM,16,HighOA_LowTemp,8.9,7.71,NA,NA,"Oakton pH 450, YSI",
-20250621,20250621,OA,10:00,1,HighOA_LowTemp,9.6,7.52,31.2,NA,Oakton pH 450,
-20250621,20250621,OA,10:00,2,HighOA_HighTemp,14.7,7.52,31.2,NA,Oakton pH 450,
-20250621,20250621,OA,10:00,3,LowOA_HighTemp,14.8,7.69,31.2,NA,Oakton pH 450,
-20250621,20250621,OA,10:00,4,LowOA_LowTemp,9.5,7.68,31.2,NA,Oakton pH 450,
-20250621,20250621,OA,10:00,5,HighOA_HighTemp,14.8,7.55,31.2,NA,Oakton pH 450,
-20250621,20250621,OA,10:00,6,LowOA_LowTemp,9.4,7.74,31.2,NA,Oakton pH 450,
-20250621,20250621,OA,10:00,7,HighOA_LowTemp,9.2,7.51,31.2,NA,Oakton pH 450,
-20250621,20250621,OA,10:00,8,LowOA_HighTemp,14.6,7.67,31.2,NA,Oakton pH 450,
-20250621,20250621,OA,10:00,9,LowOA_HighTemp,14.6,7.7,31.2,NA,Oakton pH 450,
-20250621,20250621,OA,10:00,10,LowOA_HighTemp,14.6,7.67,31.2,NA,Oakton pH 450,
-20250621,20250621,OA,10:00,11,LowOA_LowTemp,9.1,7.66,31.2,NA,Oakton pH 450,
-20250621,20250621,OA,10:00,12,HighOA_HighTemp,14.8,7.58,31.2,NA,Oakton pH 450,
-20250621,20250621,OA,10:00,13,HighOA_HighTemp,14.5,7.56,31.2,NA,Oakton pH 450,
-20250621,20250621,OA,10:00,14,HighOA_LowTemp,8.9,7.54,31.2,NA,Oakton pH 450,
-20250621,20250621,OA,10:00,15,LowOA_LowTemp,8.9,7.66,31.2,NA,Oakton pH 450,
-20250621,20250621,OA,10:00,16,HighOA_LowTemp,8.9,7.51,31.2,NA,Oakton pH 450,
+20250615,NA,OA,7:00 AM,1,HighOA_LowTemp,9.1,7.53,NA,NA,Oakton pH 450,
+20250615,NA,OA,7:00 AM,2,HighOA_HighTemp,11.8,7.5,NA,NA,Oakton pH 450,
+20250615,NA,OA,7:00 AM,3,LowOA_HighTemp,11.7,7.45,NA,NA,Oakton pH 450,
+20250615,NA,OA,7:00 AM,4,LowOA_LowTemp,9.1,7.45,NA,NA,Oakton pH 450,
+20250615,NA,OA,7:00 AM,5,HighOA_HighTemp,11.7,7.43,NA,NA,Oakton pH 450,
+20250615,NA,OA,7:00 AM,6,LowOA_LowTemp,9.1,7.61,NA,NA,Oakton pH 450,
+20250615,NA,OA,7:00 AM,7,HighOA_LowTemp,8.7,7.53,NA,NA,Oakton pH 450,
+20250615,NA,OA,7:00 AM,8,LowOA_HighTemp,11.4,7.58,NA,NA,Oakton pH 450,
+20250615,NA,OA,7:00 AM,9,LowOA_HighTemp,11.8,7.48,NA,NA,Oakton pH 450,
+20250615,NA,OA,7:00 AM,10,LowOA_HighTemp,11.7,7.41,NA,NA,Oakton pH 450,
+20250615,NA,OA,7:00 AM,11,LowOA_LowTemp,8.8,7.62,NA,NA,Oakton pH 450,
+20250615,NA,OA,7:00 AM,12,HighOA_HighTemp,11.8,7.58,NA,NA,Oakton pH 450,
+20250615,NA,OA,7:00 AM,13,HighOA_HighTemp,11.5,7.61,NA,NA,Oakton pH 450,
+20250615,NA,OA,7:00 AM,14,HighOA_LowTemp,8.9,7.59,NA,NA,Oakton pH 450,
+20250615,NA,OA,7:00 AM,15,LowOA_LowTemp,8.8,7.68,NA,NA,Oakton pH 450,
+20250615,NA,OA,7:00 AM,16,HighOA_LowTemp,8.8,7.64,NA,NA,Oakton pH 450,
+20250616,NA,OA,8:30 AM,1,HighOA_LowTemp,9.3,7.64,NA,NA,Oakton pH 450,
+20250616,NA,OA,8:30 AM,2,HighOA_HighTemp,12.7,7.39,NA,NA,Oakton pH 450,
+20250616,NA,OA,8:30 AM,3,LowOA_HighTemp,12.9,7.42,NA,NA,Oakton pH 450,
+20250616,NA,OA,8:30 AM,4,LowOA_LowTemp,9.2,7.52,NA,NA,Oakton pH 450,
+20250616,NA,OA,8:30 AM,5,HighOA_HighTemp,12.7,7.45,NA,NA,Oakton pH 450,
+20250616,NA,OA,8:30 AM,6,LowOA_LowTemp,9,7.58,NA,NA,Oakton pH 450,
+20250616,NA,OA,8:30 AM,7,HighOA_LowTemp,8.7,7.63,NA,NA,Oakton pH 450,
+20250616,NA,OA,8:30 AM,8,LowOA_HighTemp,12.6,7.55,NA,NA,Oakton pH 450,
+20250616,NA,OA,8:30 AM,9,LowOA_HighTemp,12.8,7.51,NA,NA,Oakton pH 450,
+20250616,NA,OA,8:30 AM,10,LowOA_HighTemp,12.7,7.45,NA,NA,Oakton pH 450,
+20250616,NA,OA,8:30 AM,11,LowOA_LowTemp,8.8,7.59,NA,NA,Oakton pH 450,
+20250616,NA,OA,8:30 AM,12,HighOA_HighTemp,12.9,7.58,NA,NA,Oakton pH 450,
+20250616,NA,OA,8:30 AM,13,HighOA_HighTemp,12.5,7.72,NA,NA,Oakton pH 450,
+20250616,NA,OA,8:30 AM,14,HighOA_LowTemp,8.8,7.69,NA,NA,Oakton pH 450,
+20250616,NA,OA,8:30 AM,15,LowOA_LowTemp,8.8,7.68,NA,NA,Oakton pH 450,
+20250616,NA,OA,8:30 AM,16,HighOA_LowTemp,8.9,7.71,NA,NA,Oakton pH 450,
+20250618,NA,OA,10:15,3,LowOA_HighTemp,"13,8",7.6,NA,NA,Oakton pH 450,Before water change
+20250618,NA,OA,10:15,4,LowOA_LowTemp,9.5,7.54,NA,NA,Oakton pH 450,Before water change
+20250618,NA,OA,10:15,5,HighOA_HighTemp,13.8,7.52,NA,NA,Oakton pH 450,Before water change
+20250618,NA,OA,10:15,6,LowOA_LowTemp,9.4,7.58,NA,NA,Oakton pH 450,Before water change
+20250618,NA,OA,10:15,7,HighOA_LowTemp,"8,.6",7.54,NA,NA,Oakton pH 450,Before water change
+20250618,NA,OA,10:15,8,LowOA_HighTemp,13.6,7.59,NA,NA,Oakton pH 450,Before water change
+20250618,NA,OA,10:15,9,LowOA_HighTemp,13.5,7.72,NA,NA,Oakton pH 450,Before water change
+20250618,NA,OA,10:15,10,LowOA_HighTemp,13.8,7.71,NA,NA,Oakton pH 450,Before water change
+20250618,NA,OA,10:15,11,LowOA_LowTemp,9,7.58,NA,NA,Oakton pH 450,Before water change
+20250618,NA,OA,10:15,12,HighOA_HighTemp,13.9,7.58,NA,NA,Oakton pH 450,Before water change
+20250618,NA,OA,10:15,13,HighOA_HighTemp,13.4,7.57,NA,NA,Oakton pH 450,Before water change
+20250618,NA,OA,10:15,14,HighOA_LowTemp,8.9,7.58,NA,NA,Oakton pH 450,Before water change
+20250618,NA,OA,10:15,15,LowOA_LowTemp,8.9,7.7,NA,NA,Oakton pH 450,Before water change
+20250618,NA,OA,10:15,16,HighOA_LowTemp,NA,NA,NA,NA,Oakton pH 450,Before water change
+20250618,NA,OA,10:15,1,HighOA_LowTemp,9.3,7.56,NA,NA,Oakton pH 450,Before water change
+20250618,NA,OA,10:15,2,HighOA_HighTemp,13.8,7.58,NA,NA,Oakton pH 450,Before water change
+20250618,NA,OA,18:30,3,LowOA_HighTemp,14.7,7.85,NA,NA,Oakton pH 450,After water change
+20250618,NA,OA,18:30,4,LowOA_LowTemp,9.5,7.82,NA,NA,Oakton pH 450,After water change
+20250618,NA,OA,18:30,5,HighOA_HighTemp,14.8,7.63,NA,NA,Oakton pH 450,After water change
+20250618,NA,OA,18:30,6,LowOA_LowTemp,9.5,7.84,NA,NA,Oakton pH 450,After water change
+20250618,NA,OA,18:30,7,HighOA_LowTemp,9.4,7.57,NA,NA,Oakton pH 450,After water change
+20250618,NA,OA,18:30,8,LowOA_HighTemp,11.7,7.84,NA,NA,Oakton pH 450,After water change - still increasing temperature
+20250618,NA,OA,18:30,9,LowOA_HighTemp,14.7,7.84,NA,NA,Oakton pH 450,After water change
+20250618,NA,OA,18:30,10,LowOA_HighTemp,14.7,7.86,NA,NA,Oakton pH 450,After water change
+20250618,NA,OA,18:30,11,LowOA_LowTemp,9.6,7.86,NA,NA,Oakton pH 450,After water change
+20250618,NA,OA,18:30,12,HighOA_HighTemp,13.8,7.62,NA,NA,Oakton pH 450,After water change - still increasing temperature
+20250618,NA,OA,18:30,13,HighOA_HighTemp,13.7,7.59,NA,NA,Oakton pH 450,After water change - still increasing temperature
+20250618,NA,OA,18:30,14,HighOA_LowTemp,9.3,7.52,NA,NA,Oakton pH 450,After water change
+20250618,NA,OA,18:30,15,LowOA_LowTemp,9.3,7.84,NA,NA,Oakton pH 450,After water change
+20250618,NA,OA,18:30,16,HighOA_LowTemp,9.2,7.54,NA,NA,Oakton pH 450,After water change
+20250618,NA,OA,18:30,1,HighOA_LowTemp,9.3,7.58,NA,NA,Oakton pH 450,After water change
+20250618,NA,OA,18:30,2,HighOA_HighTemp,14.8,7.69,NA,NA,Oakton pH 450,After water change
+20250619,NA,OA,11:00,3,LowOA_HighTemp,14.8,7.74,NA,NA,Oakton pH 450,Before water change
+20250619,NA,OA,11:00,4,LowOA_LowTemp,9.3,7.68,NA,NA,Oakton pH 450,Before water change
+20250619,NA,OA,11:00,5,HighOA_HighTemp,14.8,7.63,NA,NA,Oakton pH 450,Before water change
+20250619,NA,OA,11:00,6,LowOA_LowTemp,9.1,7.75,NA,NA,Oakton pH 450,Before water change
+20250619,NA,OA,11:00,7,HighOA_LowTemp,NA,7.6,NA,NA,Oakton pH 450,Before water change
+20250619,NA,OA,11:00,8,LowOA_HighTemp,14.7,7.69,NA,NA,Oakton pH 450,Before water change
+20250619,NA,OA,11:00,9,LowOA_HighTemp,14.6,7.72,NA,NA,Oakton pH 450,Before water change
+20250619,NA,OA,11:00,10,LowOA_HighTemp,14.7,7.76,NA,NA,Oakton pH 450,Before water change
+20250619,NA,OA,11:00,11,LowOA_LowTemp,8.9,7.73,NA,NA,Oakton pH 450,Before water change
+20250619,NA,OA,11:00,12,HighOA_HighTemp,14.7,7.65,NA,NA,Oakton pH 450,Before water change
+20250619,NA,OA,11:00,13,HighOA_HighTemp,14.4,7.65,NA,NA,Oakton pH 450,Before water change
+20250619,NA,OA,11:00,14,HighOA_LowTemp,8.7,7.56,NA,NA,Oakton pH 450,Before water change
+20250619,NA,OA,11:00,15,LowOA_LowTemp,8.8,7.7,NA,NA,Oakton pH 450,Before water change
+20250619,NA,OA,11:00,16,HighOA_LowTemp,8.9,7.63,NA,NA,Oakton pH 450,Before water change
+20250619,NA,OA,11:00,1,HighOA_LowTemp,9,7.59,NA,NA,Oakton pH 450,Before water change
+20250619,NA,OA,11:00,2,HighOA_HighTemp,14.7,7.6,NA,NA,Oakton pH 450,Before water change
+20250619,NA,OA,17:16,3,LowOA_HighTemp,14.8,7.74,NA,NA,Oakton pH 450,After water change
+20250619,NA,OA,17:16,4,LowOA_LowTemp,9.9,7.72,NA,NA,Oakton pH 450,After water change
+20250619,NA,OA,17:16,5,HighOA_HighTemp,14.8,7.72,NA,NA,Oakton pH 450,After water change
+20250619,NA,OA,17:16,6,LowOA_LowTemp,9.7,7.77,NA,NA,Oakton pH 450,After water change
+20250619,NA,OA,17:16,7,HighOA_LowTemp,9.4,7.55,NA,NA,Oakton pH 450,After water change
+20250619,NA,OA,17:16,8,LowOA_HighTemp,14.6,7.72,NA,NA,Oakton pH 450,After water change
+20250619,NA,OA,17:16,9,LowOA_HighTemp,14.8,7.75,NA,NA,Oakton pH 450,After water change
+20250619,NA,OA,17:16,10,LowOA_HighTemp,14.7,7.78,NA,NA,Oakton pH 450,After water change
+20250619,NA,OA,17:16,11,LowOA_LowTemp,9.7,7.77,NA,NA,Oakton pH 450,After water change
+20250619,NA,OA,17:16,12,HighOA_HighTemp,14.9,7.62,NA,NA,Oakton pH 450,After water change
+20250619,NA,OA,17:16,13,HighOA_HighTemp,14.4,7.72,NA,NA,Oakton pH 450,After water change
+20250619,NA,OA,17:16,14,HighOA_LowTemp,9.2,7.59,NA,NA,Oakton pH 450,After water change
+20250619,NA,OA,17:16,15,LowOA_LowTemp,9.3,7.74,NA,NA,Oakton pH 450,After water change
+20250619,NA,OA,17:16,16,HighOA_LowTemp,9.2,7.64,NA,NA,Oakton pH 450,After water change
+20250619,NA,OA,17:16,1,HighOA_LowTemp,9.6,7.57,NA,NA,Oakton pH 450,After water change
+20250619,NA,OA,17:16,2,HighOA_HighTemp,14.5,7.59,NA,NA,Oakton pH 450,After water change
+20250620,NA,OA,9:00,1,HighOA_LowTemp,9.2,7.6,NA,NA,Oakton pH 450,Before water change
+20250620,NA,OA,9:00,2,HighOA_HighTemp,14.7,7.6,NA,NA,Oakton pH 450,Before water change
+20250620,NA,OA,9:00,3,LowOA_HighTemp,14.8,7.72,NA,NA,Oakton pH 450,Before water change
+20250620,NA,OA,9:00,4,LowOA_LowTemp,9.5,7.65,NA,NA,Oakton pH 450,Before water change
+20250620,NA,OA,9:00,5,HighOA_HighTemp,NA,NA,NA,NA,Oakton pH 450,Before water change
+20250620,NA,OA,9:00,6,LowOA_LowTemp,9.3,7.7,NA,NA,Oakton pH 450,Before water change
+20250620,NA,OA,9:00,7,HighOA_LowTemp,8.7,7.6,NA,NA,Oakton pH 450,Before water change
+20250620,NA,OA,9:00,8,LowOA_HighTemp,14.6,7.67,NA,NA,Oakton pH 450,Before water change
+20250620,NA,OA,9:00,9,LowOA_HighTemp,14.6,7.74,NA,NA,Oakton pH 450,Before water change
+20250620,NA,OA,9:00,10,LowOA_HighTemp,14.6,7.75,NA,NA,Oakton pH 450,Before water change
+20250620,NA,OA,9:00,11,LowOA_LowTemp,9.1,7.7,NA,NA,Oakton pH 450,Before water change
+20250620,NA,OA,9:00,12,HighOA_HighTemp,14.9,7.64,NA,NA,Oakton pH 450,Before water change
+20250620,NA,OA,9:00,13,HighOA_HighTemp,14.5,7.63,NA,NA,Oakton pH 450,Before water change
+20250620,NA,OA,9:00,14,HighOA_LowTemp,8.8,7.61,NA,NA,Oakton pH 450,Before water change
+20250620,NA,OA,9:00,15,LowOA_LowTemp,8.9,7.69,NA,NA,Oakton pH 450,Before water change
+20250620,NA,OA,9:00,16,HighOA_LowTemp,8.9,7.65,NA,NA,Oakton pH 450,Before water change
+20250620,NA,OA,13:35,3,LowOA_HighTemp,14.8,7.85,NA,NA,Oakton pH 450,After water change
+20250620,NA,OA,13:35,4,LowOA_LowTemp,9.5,7.85,NA,NA,Oakton pH 450,After water change
+20250620,NA,OA,13:35,5,HighOA_HighTemp,14.6,7.61,NA,NA,Oakton pH 450,After water change
+20250620,NA,OA,13:35,6,LowOA_LowTemp,9.4,7.85,NA,NA,Oakton pH 450,After water change
+20250620,NA,OA,13:35,7,HighOA_LowTemp,11.4,7.61,NA,NA,Oakton pH 450,After water change - still decreasing temperature
+20250620,NA,OA,13:35,8,LowOA_HighTemp,14.7,7.83,NA,NA,Oakton pH 450,After water change
+20250620,NA,OA,13:35,9,LowOA_HighTemp,14.6,7.85,NA,NA,Oakton pH 450,After water change
+20250620,NA,OA,13:35,10,LowOA_HighTemp,14.5,7.85,NA,NA,Oakton pH 450,After water change
+20250620,NA,OA,13:35,11,LowOA_LowTemp,10.6,7.82,NA,NA,Oakton pH 450,After water change - still decreasing temperature
+20250620,NA,OA,13:35,12,HighOA_HighTemp,14.9,7.63,NA,NA,Oakton pH 450,After water change
+20250620,NA,OA,13:35,13,HighOA_HighTemp,14.4,7.64,NA,NA,Oakton pH 450,After water change
+20250620,NA,OA,13:35,14,HighOA_LowTemp,10.7,7.84,NA,NA,Oakton pH 450,After water change - still decreasing temperature
+20250620,NA,OA,13:35,15,LowOA_LowTemp,9.9,7.84,NA,NA,Oakton pH 450,After water change - still decreasing temperature
+20250620,NA,OA,13:35,16,HighOA_LowTemp,10.8,7.69,NA,NA,Oakton pH 450,After water change - still decreasing temperature
+20250620,NA,OA,13:35,1,HighOA_LowTemp,10.7,7.6,NA,NA,Oakton pH 450,After water change - still decreasing temperature
+20250620,NA,OA,13:35,2,HighOA_HighTemp,14.9,7.6,NA,NA,Oakton pH 450,After water change
+20250621,20250621,OA,10:00,1,HighOA_LowTemp,9.6,7.52,NA,NA,Oakton pH 450,After water change
+20250621,20250621,OA,10:00,2,HighOA_HighTemp,14.7,7.52,NA,NA,Oakton pH 450,After water change
+20250621,20250621,OA,10:00,3,LowOA_HighTemp,14.8,7.69,NA,NA,Oakton pH 450,After water change
+20250621,20250621,OA,10:00,4,LowOA_LowTemp,9.5,7.68,NA,NA,Oakton pH 450,After water change
+20250621,20250621,OA,10:00,5,HighOA_HighTemp,14.8,7.55,NA,NA,Oakton pH 450,After water change
+20250621,20250621,OA,10:00,6,LowOA_LowTemp,9.4,7.74,NA,NA,Oakton pH 450,After water change
+20250621,20250621,OA,10:00,7,HighOA_LowTemp,9.2,7.51,NA,NA,Oakton pH 450,After water change
+20250621,20250621,OA,10:00,8,LowOA_HighTemp,14.6,7.67,NA,NA,Oakton pH 450,After water change
+20250621,20250621,OA,10:00,9,LowOA_HighTemp,14.6,7.7,NA,NA,Oakton pH 450,After water change
+20250621,20250621,OA,10:00,10,LowOA_HighTemp,14.6,7.67,NA,NA,Oakton pH 450,After water change
+20250621,20250621,OA,10:00,11,LowOA_LowTemp,9.1,7.66,NA,NA,Oakton pH 450,After water change
+20250621,20250621,OA,10:00,12,HighOA_HighTemp,14.8,7.58,NA,NA,Oakton pH 450,After water change
+20250621,20250621,OA,10:00,13,HighOA_HighTemp,14.5,7.56,NA,NA,Oakton pH 450,After water change
+20250621,20250621,OA,10:00,14,HighOA_LowTemp,8.9,7.54,NA,NA,Oakton pH 450,After water change
+20250621,20250621,OA,10:00,15,LowOA_LowTemp,8.9,7.66,NA,NA,Oakton pH 450,After water change
+20250621,20250621,OA,10:00,16,HighOA_LowTemp,8.9,7.51,NA,NA,Oakton pH 450,After water change
+20250622,20250621,OA,10:12,1,HighOA_LowTemp,9.5,7.76,NA,NA,Neptune,"Before water change, measured to compare and assess offsets"
+20250622,20250621,OA,10:15,2,HighOA_HighTemp,15,8.1,NA,NA,Neptune,"Before water change, measured to compare and assess offsets"
+20250622,20250621,OA,10:20,3,LowOA_HighTemp,15.1,8.06,NA,NA,Neptune,"Before water change, measured to compare and assess offsets"
+20250622,20250621,OA,10:24,4,LowOA_LowTemp,9.5,7.87,NA,NA,Neptune,"Before water change, measured to compare and assess offsets"
+20250622,20250621,OA,10:30,5,HighOA_HighTemp,15.1,8.09,NA,NA,Neptune,"Before water change, measured to compare and assess offsets"
+20250622,20250621,OA,10:37,8,LowOA_HighTemp,15.1,8.06,NA,NA,Neptune,"Before water change, measured to compare and assess offsets"
+20250622,20250621,OA,10:42,9,LowOA_HighTemp,15,8.03,NA,NA,Neptune,"Before water change, measured to compare and assess offsets"
+20250622,20250621,OA,11:02,10,LowOA_HighTemp,15,8.02,NA,NA,Neptune,"Before water change, measured to compare and assess offsets"
+20250622,20250621,OA,11:04,11,LowOA_LowTemp,9.2,7.79,NA,NA,Neptune,"Before water change, measured to compare and assess offsets"
+20250622,20250621,OA,11:06,12,HighOA_HighTemp,14.2,8.11,NA,NA,Neptune,"Before water change, measured to compare and assess offsets"
+20250622,20250621,OA,11:10,6,LowOA_LowTemp,9.3,8.07,NA,NA,Neptune,"Before water change, measured to compare and assess offsets"
+20250622,20250621,OA,11:15,13,HighOA_HighTemp,14.9,8.07,NA,NA,Neptune,"Before water change, measured to compare and assess offsets"
+20250622,20250621,OA,11:18,16,HighOA_LowTemp,9,7.82,NA,NA,Neptune,"Before water change, measured to compare and assess offsets"
+20250622,20250621,OA,11:28,7,HighOA_LowTemp,9,8.09,NA,NA,Neptune,"Before water change, measured to compare and assess offsets"
+20250622,20250621,OA,11:34,15,LowOA_LowTemp,9,7.85,NA,NA,Neptune,"Before water change, measured to compare and assess offsets"
+20250622,20250621,OA,12:08,14,HighOA_LowTemp,9.1,8.04,NA,NA,Neptune,"Before water change, measured to compare and assess offsets"
+20250622,20250621,OA,10:12,1,HighOA_LowTemp,9.2,7.58,NA,NA,Oakton pH 450,Before water change
+20250622,20250621,OA,10:15,2,HighOA_HighTemp,14.7,7.9,NA,NA,Oakton pH 450,Before water change
+20250622,20250621,OA,10:20,3,LowOA_HighTemp,14.8,7.88,NA,NA,Oakton pH 450,Before water change
+20250622,20250621,OA,10:24,4,LowOA_LowTemp,9.2,7.69,NA,NA,Oakton pH 450,Before water change
+20250622,20250621,OA,10:30,5,HighOA_HighTemp,14.9,7.88,NA,NA,Oakton pH 450,Before water change
+20250622,20250621,OA,10:37,8,LowOA_HighTemp,14.7,7.89,NA,NA,Oakton pH 450,Before water change
+20250622,20250621,OA,10:42,9,LowOA_HighTemp,14.6,7.89,NA,NA,Oakton pH 450,Before water change
+20250622,20250621,OA,11:02,10,LowOA_HighTemp,15.1,7.84,NA,NA,Oakton pH 450,Before water change
+20250622,20250621,OA,11:04,11,LowOA_LowTemp,9.2,7.65,NA,NA,Oakton pH 450,Before water change
+20250622,20250621,OA,11:06,12,HighOA_HighTemp,14.5,7.91,NA,NA,Oakton pH 450,Before water change
+20250622,20250621,OA,11:10,6,LowOA_LowTemp,9.4,7.89,NA,NA,Oakton pH 450,Before water change
+20250622,20250621,OA,11:15,13,HighOA_HighTemp,15.8,7.88,NA,NA,Oakton pH 450,Before water change
+20250622,20250621,OA,11:18,16,HighOA_LowTemp,9.3,7.65,NA,NA,Oakton pH 450,Before water change
+20250622,20250621,OA,11:28,7,HighOA_LowTemp,9,7.86,NA,NA,Oakton pH 450,Before water change
+20250622,20250621,OA,11:34,15,LowOA_LowTemp,9.1,7.65,NA,NA,Oakton pH 450,Before water change
+20250622,20250621,OA,12:08,14,HighOA_LowTemp,9.2,7.84,NA,NA,Oakton pH 450,Before water change
+20250622,20250621,OA,15:10,1,HighOA_LowTemp,9.1,7.57,NA,NA,Oakton pH 450,After water change
+20250622,20250621,OA,15:12,2,HighOA_HighTemp,15.2,7.71,NA,NA,Oakton pH 450,After water change
+20250622,20250621,OA,15:13,3,LowOA_HighTemp,15.3,7.75,NA,NA,Oakton pH 450,After water change
+20250622,20250621,OA,15:14,4,LowOA_LowTemp,9.2,7.79,NA,NA,Oakton pH 450,After water change
+20250622,20250621,OA,15:14,5,HighOA_HighTemp,15.2,7.63,NA,NA,Oakton pH 450,After water change
+20250622,20250621,OA,15:15,6,LowOA_LowTemp,9.3,7.82,NA,NA,Oakton pH 450,After water change
+20250622,20250621,OA,15:16,13,HighOA_HighTemp,15,7.7,NA,NA,Oakton pH 450,After water change
+20250622,20250621,OA,15:19,14,HighOA_LowTemp,9.2,7.59,NA,NA,Oakton pH 450,After water change
+20250622,20250621,OA,15:20,15,LowOA_LowTemp,9.1,7.76,NA,NA,Oakton pH 450,After water change
+20250622,20250621,OA,15:22,16,HighOA_LowTemp,9.1,7.64,NA,NA,Oakton pH 450,After water change
+20250622,20250621,OA,15:24,7,HighOA_LowTemp,9.3,7.56,NA,NA,Oakton pH 450,After water change
+20250622,20250621,OA,15:25,8,LowOA_HighTemp,15,7.75,NA,NA,Oakton pH 450,After water change
+20250622,20250621,OA,15:25,9,LowOA_HighTemp,15.1,7.77,NA,NA,Oakton pH 450,After water change
+20250622,20250621,OA,15:27,10,LowOA_HighTemp,15,7.68,NA,NA,Oakton pH 450,After water change
+20250622,20250621,OA,15:27,11,LowOA_LowTemp,9.2,7.83,NA,NA,Oakton pH 450,After water change
+20250622,20250621,OA,15:28,12,HighOA_HighTemp,15.2,7.64,NA,NA,Oakton pH 450,After water change
+20250623,20250623,OA,9:20,1,HighOA_LowTemp,9.5,7.59,NA,NA,Oakton pH 450,After water change
+20250623,20250623,OA,9:20,2,HighOA_HighTemp,15.2,7.52,NA,NA,Oakton pH 450,After water change
+20250623,20250623,OA,9:20,3,LowOA_HighTemp,15.1,7.75,NA,NA,Oakton pH 450,After water change
+20250623,20250623,OA,9:20,4,LowOA_LowTemp,9.4,7.74,NA,NA,Oakton pH 450,After water change
+20250623,20250623,OA,9:20,5,HighOA_HighTemp,15.1,7.67,NA,NA,Oakton pH 450,After water change
+20250623,20250623,OA,9:20,6,LowOA_LowTemp,9.4,7.79,NA,NA,Oakton pH 450,After water change
+20250623,20250623,OA,9:20,7,HighOA_LowTemp,9.4,7.54,NA,NA,Oakton pH 450,After water change
+20250623,20250623,OA,9:20,8,LowOA_HighTemp,15.1,7.76,NA,NA,Oakton pH 450,After water change
+20250623,20250623,OA,9:20,9,LowOA_HighTemp,15,7.78,NA,NA,Oakton pH 450,After water change
+20250623,20250623,OA,9:20,10,LowOA_HighTemp,15,7.68,NA,NA,Oakton pH 450,After water change
+20250623,20250623,OA,9:20,11,LowOA_LowTemp,9.4,7.78,NA,NA,Oakton pH 450,After water change
+20250623,20250623,OA,9:20,12,HighOA_HighTemp,15.2,7.62,NA,NA,Oakton pH 450,After water change
+20250623,20250623,OA,9:20,13,HighOA_HighTemp,14.9,7.7,NA,NA,Oakton pH 450,After water change
+20250623,20250623,OA,9:20,14,HighOA_LowTemp,9.5,7.59,NA,NA,Oakton pH 450,After water change
+20250623,20250623,OA,9:20,15,LowOA_LowTemp,9.4,7.72,NA,NA,Oakton pH 450,After water change
+20250623,20250623,OA,9:20,16,HighOA_LowTemp,9.4,7.62,NA,NA,Oakton pH 450,After water change
+20250624,20250623,OA,13:08,1,HighOA_LowTemp,9.4,7.61,NA,NA,Oakton pH 450,After water change
+20250624,20250623,OA,13:08,2,HighOA_HighTemp,15.1,7.61,NA,NA,Oakton pH 450,After water change
+20250624,20250623,OA,13:08,3,LowOA_HighTemp,15.2,7.82,NA,NA,Oakton pH 450,After water change
+20250624,20250623,OA,13:08,4,LowOA_LowTemp,9.7,7.85,NA,NA,Oakton pH 450,After water change
+20250624,20250623,OA,13:08,5,HighOA_HighTemp,15.3,7.58,NA,NA,Oakton pH 450,After water change
+20250624,20250623,OA,13:08,6,LowOA_LowTemp,9.6,7.79,NA,NA,Oakton pH 450,After water change
+20250624,20250623,OA,13:08,7,HighOA_LowTemp,9.2,7.57,NA,NA,Oakton pH 450,After water change
+20250624,20250623,OA,13:08,8,LowOA_HighTemp,15,7.86,NA,NA,Oakton pH 450,After water change
+20250624,20250623,OA,13:08,9,LowOA_HighTemp,15,7.83,NA,NA,Oakton pH 450,After water change
+20250624,20250623,OA,13:08,10,LowOA_HighTemp,15,7.82,NA,NA,Oakton pH 450,After water change
+20250624,20250623,OA,13:08,11,LowOA_LowTemp,9.3,7.82,NA,NA,Oakton pH 450,After water change
+20250624,20250623,OA,13:08,12,HighOA_HighTemp,15.2,7.6,NA,NA,Oakton pH 450,After water change
+20250624,20250623,OA,13:08,13,HighOA_HighTemp,14.8,7.61,NA,NA,Oakton pH 450,After water change
+20250624,20250623,OA,13:08,14,HighOA_LowTemp,9.5,7.61,NA,NA,Oakton pH 450,After water change
+20250624,20250623,OA,13:08,15,LowOA_LowTemp,9.2,7.78,NA,NA,Oakton pH 450,After water change
+20250624,20250623,OA,13:08,16,HighOA_LowTemp,8.9,7.65,NA,NA,Oakton pH 450,After water change
