@@ -1,0 +1,322 @@
+---
+title: "Cell Viability"
+author: "Samuel Gurr"
+date: "2025-06-26"
+output: html_notebook
+---
+
+-   Last updates: 7/10/25
+
+# OAP flow cytometry analysis
+
+## Load Libraries
+
+```{r set up, include=FALSE}
+
+library(lmtest) # to receive p value from betareg model
+library(FSA) # for the Dun test post hoc for SRH non-parametric 2 way anova]
+library(emmeans)
+library(ggplot2)
+library(dplyr)
+library(tidyverse)
+library(car)
+library(lmerTest)
+library(tidyr)
+library(tidyverse)
+library(reshape2)
+library(ggpubr)
+library(nlme)
+library(rcompanion) # to run the Schrier -Ray-Hare non parametric 2 way 
+knitr::opts_knit$set(root.dir = "C:/Users/samjg/Documents/Github_repositories/Pmagellanicus_omics/RAnalysis") # sets the working directory for the entire R markdown file - no need to reload the wd
+```
+
+## Load flow cytometry data
+
+**NOTE**: the statistics option ion C6 PLus software was used to compile the data (i.e. mean FL1) - the following loaded data file was assembled manually to include the sample metadata (i.e. data, treatments, etc.) as well as these flow cytometry data
+
+```{r load data}
+# getwd()
+# read data 
+data  <- read.csv(file="C:/Users/samjg/Documents/Github_repositories/Pmagellanicus_omics/RAnalysis/Data/Flow_cytometry/Cell_viability_raw.csv", header = TRUE)  %>% 
+              # dplyr::select(-c(X)) %>% 
+              dplyr::mutate(Proportion_alive_ADJ = (Live/(Live+Dead))) %>% 
+              dplyr::mutate(Proportion_dead_ADJ = (Dead/(Live+Dead))) 
+data <- data[-1,] # omit row one, sampled 1 was redone 
+# View(data)
+
+treatment_metadata <- read.csv(file="C:/Users/samjg/Documents/Github_repositories/Pmagellanicus_omics/RAnalysis/Data/Experiment_metadata/Experiment_metadata.csv", header = TRUE) %>% dplyr::select(c(Tank_num, Temperature, OA, Color))
+  
+sample_metadata    <- read.csv(file="C:/Users/samjg/Documents/Github_repositories/Pmagellanicus_omics/RAnalysis/Data/Experiment_metadata/Sample_metadata.csv", header = TRUE) %>% dplyr::select(-c(TagSeq_ID, ATACseq_ID))
+
+metadata <- merge(treatment_metadata, sample_metadata) 
+
+final <- merge(data, metadata) %>% 
+          dplyr::select(Date, Day, 
+                        Tank_num, Color, Tag_color,
+                        Temperature, OA,
+                        flow_cy_ID, Proportion_alive_ADJ) %>% 
+          dplyr::mutate(population = 
+                       case_when(Tag_color %in% 'blue' ~ 'Cobscook',
+                                 TRUE ~ 'Hurricane')) %>% 
+          dplyr::mutate(treatment =
+                          paste0(Temperature,'_X_', OA))
+
+final_OM <- final %>% # data %>%
+  dplyr::filter(!flow_cy_ID %in% c(3,8,11,18,21,27)) %>%
+  dplyr::filter(!(population %in% 'Hurricane' & Proportion_alive_ADJ < 0.18)) %>% 
+  dplyr::mutate(OA_Pop = paste0(OA,"_",population),
+                Arag  = case_when(
+                  (Temperature %in% 'High' & OA %in% 'Low') ~ 1,
+                  (Temperature %in% 'Low' & OA %in% 'Low') ~ 2,
+                  (Temperature %in% 'High' & OA %in% 'High') ~ 3,
+                  (Temperature %in% 'Low' & OA %in% 'High') ~ 4))
+```
+
+
+```{r visualize data}
+    
+
+# Calculate summary statistics per group
+ggplot(final_OM, aes(x = factor(Temperature), y = Proportion_alive_ADJ, group=population)) +
+  geom_jitter(alpha = 0.5, size = 2, position=position_dodge(.4)) +
+  # Add mean and error bar (standard error)
+  stat_summary(fun = mean, geom = "point", size = 2, color = "red",position=position_dodge(.4)) +
+  stat_summary(fun.data = mean_se, geom = "errorbar", width = 0.2, color = "red", position=position_dodge(.4)) +
+  scale_shape_manual(values=c(21, 22)) + # filled circle, filled triangle, and X 
+  scale_fill_manual(values = c("#009E73", "#CC79A7")) +
+    # geom_jitter() +
+    theme_classic() +
+    theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) + 
+    ggtitle("Percent alive cells - 14 days") +
+    labs(y= "Percent alive cells (%)", x = "Temperature") +
+    facet_wrap(~OA)
+# summary
+summary_df <- final_OM %>% # data %>%
+  # edit data to suit out needs
+  group_by(Temperature, OA, treatment, population) %>% # group by columns for treatment
+  dplyr::summarise( # summarise to aquire the mean and SE for plotting
+    PercLive_mean = mean(Proportion_alive_ADJ), # mean
+    PercLive_sd = sd(Proportion_alive_ADJ), # sd
+    n = n(), # count
+    PercLive_se = PercLive_sd / sqrt(n)) # SE
+
+# plot it
+PropLive_RxnNorm <- 
+  ggplot(final_OM, aes(x=Temperature, y=Proportion_alive_ADJ, group=OA)) + 
+    #geom_line(aes(group = factor(population), linetype = population), size = 0.5, position=position_dodge(.4)) +  # connect a line between variables
+    #scale_linetype_manual(values=c("solid", "dashed")) +
+    # geom_point(aes(shape=OA, fill=OA), size = 4,position=position_dodge(.4)) + 
+    geom_jitter(width = 0.15, alpha = 0.5, size = 2) + # all data points
+    geom_point(data = summary_df, aes(x = Temperature, 
+                                      y = PercLive_mean,
+                                      shape=OA, 
+                                      fill=OA), 
+               size = 4,
+               position=position_dodge(.4)) + 
+    scale_shape_manual(values=c(21, 22)) + # filled circle, filled triangle, and X 
+    scale_fill_manual(values = c("#009E73", "#CC79A7")) +
+    geom_errorbar(data = summary_df, aes(x = Temperature,
+                                         y = PercLive_mean,
+                                         ymin=(PercLive_mean)-(PercLive_se), 
+                                         ymax=(PercLive_mean)+(PercLive_se)), 
+                  width=.2,
+                  position=position_dodge(.4)) +
+    # geom_jitter() +
+    theme_classic() +
+    theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) + 
+    ggtitle("Percent alive cells - 14 days") +
+    labs(y= "Percent alive cells (%)", x = "Temperature") +
+    facet_wrap(~population)
+PropLive_RxnNorm
+
+View(final_OM)
+# Mean SE
+
+final_OM$treatment <- factor(final_OM$treatment, 
+                             levels=c("High_X_Low", "Low_X_Low", "High_X_High", "Low_X_High"))
+PropLive_RxnNorm <- final_OM %>% 
+                    dplyr::mutate(Proportion_dead_ADJ = 1-Proportion_alive_ADJ) %>% 
+                    # dplyr::filter(!(population %in% 'Hurricane' & Proportion_alive_ADJ < 0.18)) %>%
+                    dplyr::filter(!Proportion_alive_ADJ < 0.18) %>% 
+                       ggplot(
+                       aes(x=treatment,
+                           y=as.numeric(Proportion_alive_ADJ),
+                           group=factor(OA_Pop)), 
+                       stat="identity") +
+                       geom_point(position = position_dodge2(width = 0.2)) + 
+                       stat_summary(fun.y="mean", size = 0.8,
+                                          position = position_dodge2(width = 0.2),
+                                    color=c("black", "grey40",
+                                            "black", "grey40",
+                                            "black", "grey40",
+                                            "black", "grey40"),
+                                    shape=c(19,19,
+                                            19,19,
+                                            19,19,
+                                            19,19)) +
+                       stat_summary(fun.min = function(x) mean(x) - sd(x)/sqrt(length(x)), 
+                                          fun.max = function(x) mean(x) + sd(x)/sqrt(length(x)),
+                                          geom = 'errorbar', width = 0.25, size = 1,
+                                          position = position_dodge2(width = 0.2),
+                                    color=c("black", "grey40",
+                                            "black", "grey40",
+                                            "black", "grey40",
+                                            "black", "grey40")) + 
+                        labs(title="Percent alive cells - 14 days", 
+                            x ="Treatment", 
+                            y = "Percent alive cells (%)") +
+                        # scale_fill_manual(breaks=c("Low pCO2", "Moderate pCO2", "High pCO2"), 
+                        #                    values=c("forestgreen","orange", "purple")) +
+                        # scale_fill_manual(breaks=c("High pCO2", "Low pCO2"), 
+                        #                    values=c("#009E73", "#CC79A7")) +
+                        # scale_x_discrete(labels=c("L", "M", "H")) +
+                        # scale_y_continuous(expand = c(0, 0), limits = c(0, 0.7), breaks = seq(0, 0.7, by = 0.1)) +
+                        theme_classic() +
+                        theme(panel.grid.major = element_blank(), 
+                              panel.grid.minor = element_blank(), 
+                              # axis.title.x=element_blank(),
+                              axis.text.x = element_text(angle = 0, vjust = 0.5, hjust=1),
+                              axis.text=element_text(size=8),
+                              plot.title = element_text(size=12),
+                              legend.position="none") +
+                      facet_wrap(~population)
+print(PropLive_RxnNorm)
+
+
+
+```
+
+
+
+```{r statistics}
+
+
+TwoWaymod <- aov(
+  lm(
+    Proportion_alive_ADJ ~
+      as.factor(Arag) * population,
+    data = final_OM)
+  )
+
+shapiro.test(residuals(TwoWaymod))
+# data:  residuals(TwoWaymod)
+# W = 0.98774, p-value = 0.965 
+summary(TwoWaymod)
+#                            Df  Sum Sq Mean Sq F value Pr(>F)  
+# as.factor(Arag)             3 0.12002 0.04001   3.197 0.0407 *
+# population                  1 0.01484 0.01484   1.186 0.2865  
+# as.factor(Arag):population  3 0.03972 0.01324   1.058 0.3845  
+# Residuals                  25 0.31284 0.01251  
+
+Cobscook_mod <- lm(
+                    Proportion_alive_ADJ ~
+                      # OA * Temperature,
+                      as.factor(Arag) ,
+                    data = (final_OM %>% # data %>%
+                              dplyr::filter(population %in% 'Cobscook')))
+shapiro.test(resid(Cobscook_mod)) # 0.9766
+leveneTest(Cobscook_mod) # 0.2714
+summary(Cobscook_mod)
+summary(
+     aov(
+       lm(
+          Proportion_alive_ADJ ~
+            # OA * Temperature,
+            as.factor(Arag),
+          data = (final_OM %>% # data %>%
+                    dplyr::filter(population %in% 'Cobscook')) #  %>% 
+                    # dplyr::filter(!flow_cy_ID %in% c(3,8,27)) %>% 
+                    # dplyr::filter(!flow_cy_ID < 16))
+         )
+        )
+       )
+
+
+
+
+
+Cobscook_Twoway <- lm(
+                    Proportion_alive_ADJ ~
+                      Temperature * OA,
+                    data = (final_OM %>% # data %>%
+                    dplyr::filter(population %in% 'Cobscook'))
+                      )
+shapiro.test(resid(Cobscook_Twoway)) # 0.9766
+summary(Cobscook_Twoway)
+#                      Estimate Std. Error t value Pr(>|t|)    
+# (Intercept)           0.40358    0.05987   6.741 9.46e-06 ***
+# TemperatureLow       -0.01654    0.08981  -0.184    0.857    
+# OALow                 0.08726    0.08467   1.031    0.320    
+# TemperatureLow:OALow -0.08749    0.12701  -0.689    0.502 
+
+Cobscook_Oneway <- lm(
+                    Proportion_alive_ADJ ~
+                      treatment,
+                    data = (final_OM %>% # data %>%
+                    dplyr::filter(population %in% 'Cobscook'))
+                      )
+shapiro.test(resid(Cobscook_Oneway)) # 0.9766
+leveneTest(Cobscook_Oneway) # 0.2195
+
+
+
+
+
+
+Hurricane_Twoway <- lm(
+                    Proportion_alive_ADJ ~
+                      Temperature * OA,
+                    data = (final_OM %>% # data %>%
+                    dplyr::filter(population %in% 'Hurricane'))
+                      )
+shapiro.test(resid(Hurricane_Twoway)) # 0.821
+summary(Hurricane_Twoway)
+#                       Estimate Std. Error t value Pr(>|t|)    
+# (Intercept)           0.454113   0.033550  13.535 3.34e-08 ***
+# TemperatureLow       -0.166758   0.050326  -3.314  0.00691 ** 
+# OALow                 0.004154   0.054788   0.076  0.94092    
+# TemperatureLow:OALow -0.028600   0.079277  -0.361  0.72511
+
+Hurricane_Oneway <- lm(
+                    Proportion_alive_ADJ ~
+                      treatment,
+                    data = (final_OM %>% # data %>%
+                    dplyr::filter(population %in% 'Hurricane'))
+                      )
+shapiro.test(resid(Hurricane_Oneway)) # 0.821
+leveneTest(Hurricane_Oneway) # 0.3932
+?emmeans
+mod_means_contr <- emmeans::emmeans(object = Hurricane_mod,
+                                    pairwise ~ "treatment",
+                                    adjust = "tukey")
+mod_means <- multcomp::cld(object = mod_means_contr$emmeans,
+                           Letters = letters)
+ # Arag emmean     SE df lower.CL upper.CL .group
+ #    2  0.263 0.0433 11    0.168    0.358  a    
+ #    4  0.287 0.0375 11    0.205    0.370  ab   
+ #    3  0.454 0.0336 11    0.380    0.528    c  
+ #    1  0.458 0.0433 11    0.363    0.554   bc  
+
+summary(Hurricane_mod)
+TukeyHSD(Hurricane_mod)
+summary(
+     aov(
+       lm(
+          Proportion_alive_ADJ ~
+            Arag,
+          data = (final_OM %>% # data %>%
+                    dplyr::filter(population %in% 'Hurricane')  %>% 
+                    dplyr::filter(!Proportion_alive_ADJ <0.18)) 
+                    # dplyr::filter(!flow_cy_ID < 16))
+         )
+        )
+       )
+
+ scheirerRayHare(
+          Proportion_alive_ADJ ~
+            OA * Temperature,
+          data = (final_OM %>% # data %>%
+                    dplyr::filter(population %in% 'Hurricane')  %>% 
+                    dplyr::filter(!Proportion_alive_ADJ <0.18))
+ )
+``` 

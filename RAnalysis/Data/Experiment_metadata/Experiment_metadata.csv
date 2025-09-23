@@ -1,0 +1,17 @@
+Tank_num,Temperature,OA,Color,Cobscook,Hurricane_Buzz,Hurricane_Crane,Hurricane_Wlittle
+1,Low,High,black,4,1,2,1
+2,High,High,red,4,1,2,1
+3,High,Low,yellow,4,2,2,0
+4,Low,Low,blue,4,2,2,0
+5,High,High,red,4,1,2,1
+6,Low,Low,blue,4,2,1,1
+7,Low,High,black,4,1,2,1
+8,High,Low,yellow,4,1,1,2
+9,High,Low,yellow,4,1,2,1
+10,High,Low,yellow,4,1,1,2
+11,Low,Low,blue,4,2,1,1
+12,High,High,red,4,2,1,1
+13,High,High,red,4,1,2,1
+14,Low,High,black,4,2,1,1
+15,Low,Low,blue,4,1,1,2
+16,Low,High,black,4,1,1,2

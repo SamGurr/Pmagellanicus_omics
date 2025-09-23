@@ -1,0 +1,42 @@
+﻿flow_cy_ID,Live,Dead,
+1,37,28,"omit data, tube was not mixed"
+16,314,212,
+17,156,106,
+18,1764,1126,"high signal, more data at ends looks unreliable"
+19,438,343,
+20,471,360,
+21,353,233,
+22,324,328,
+23,841,860,
+24,970,753,
+25,203,229,
+26,492,763,
+27,48,64,small signal. No hemocyte cloud
+28,134,179,
+29,528,1398,
+30,152,390,
+31,185,456,
+32,377,550,
+33,186,340,
+34,327,697,
+35,252,152,
+36,722,633,
+37,416,1262,
+38,291,380,
+39,291,655,
+40,284,489,
+1,61,207,"1-15 completed about 2 hrs later, trouble shoot flow cy and remix hemolymph"
+2,467,808,
+3,80,252,light signal mimimal ssc cell cloud
+4,243,668,
+5,307,630,
+6,184,506,
+7,47,295,
+8,54,247,light signal mimimal ssc cell cloud
+9,160,233,
+10,95,456,
+11,892,1854,"high signal, more data at ends looks unreliable"
+12,79,156,
+13,241,621,
+14,264,406,
+15,159,155,

@@ -10,12 +10,13 @@
 library("XML")
 library("plyr")
 library(RCurl)
+library(tidyr)
 
 # Set your Apex controller's IP address and XML endpoint - load into the computer 
 # NOTE: you must be on the same wifi IP address that the Apex is connected to
-xmlfile.tanks_1_6 <- xmlParse("http://10.80.55.38:80/cgi-bin/datalog.xml?sdate=250611&days=14") # tanks 1 - 7
-xmlfile.tanks_7_12 <- xmlParse("http://10.80.55.33:80/cgi-bin/datalog.xml?sdate=250611&days=14") #
-xmlfile.tanks_13_20 <- xmlParse("http://10.80.55.75:80/cgi-bin/datalog.xml?sdate=250611&days=14") #
+xmlfile.tanks_1_6 <- xmlParse("http://10.80.55.38:80/cgi-bin/datalog.xml?sdate=250611&days=15") # tanks 1 - 7
+xmlfile.tanks_7_12 <- xmlParse("http://10.80.55.33:80/cgi-bin/datalog.xml?sdate=250611&days=15") #
+xmlfile.tanks_13_20 <- xmlParse("http://10.80.55.75:80/cgi-bin/datalog.xml?sdate=250611&days=15") #
 
 # tanks 1 - 6 as data frame
 ApexData.tanks_1_6 <- ldply(xmlToList(xmlfile.tanks_1_6), data.frame) #convert xml to dataframe
@@ -44,7 +45,6 @@ ApexData.tanks_13_20 <- head(ApexData.tanks_13_20,-2) #remove extra metadata fro
 
 # ProbeData tanks 1 - 6 
 head(ApexData.tanks_1_6[1,])
-colnames()#keep columnes with data of interest. This needs to be changed as it will be specific to the Apex configuration
 ProbeData.tanks_1_6 <- as.data.frame(ApexData.tanks_1_6) %>% 
                                 dplyr::select('date',
                                               'probe.value.44', # temperature tank 1
