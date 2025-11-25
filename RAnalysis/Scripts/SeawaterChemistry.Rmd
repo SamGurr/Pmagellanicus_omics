@@ -1,0 +1,102 @@
+---
+title: "Carbonate_Chemistry"
+author: "Samuel Gurr"
+date: "2025-11-25"
+output: html_document
+---
+
+-   Last updates: 11/25/2025
+
+# Seawater carbonate chemistry 
+
+*About* 
+
+* Exerpiment completed at Downeast Institute (DEI) using the OA laboratory, static APEX relay control system
+* We have the following datasets
+  - discrete chemistry measured with dipping probe, almost daily for all tanks
+  - continuous measurements of pH and temperature via APEX (supplementary material, only)
+  - Total Alkalinity (TA) measured by Elliot Roberts for subsamples 
+  - TA, pH, and dissolved inorganic carbon (DIC) measured by NEFSC Milford Lab (G. Bernatchez) from poisoned samples
+* Note: the later uses the discrete chemistry dipping probe measurements of temperature and salinity on the day samples were poisoned to 
+assist carbonate chemistry calculations. This is the most reliable dataset, although we will diagnose errors and visualize the others as well
+
+## Load Libraries
+
+```{r setup, include=F}
+library(tidyverse)
+library(Rmisc)
+library(knitr)
+knitr::opts_knit$set(root.dir = "C:/Users/gurrs/Documents/Github_repositories/Pmagellanicus_omics/RAnalysis") # sets the working directory for the entire R markdown file - no need to reload the wd
+```
+
+## Load seawater chemistry data
+
+```{r load data}
+metadata       <- read.csv(file="Data/Experiment_metadata/Experiment_metadata.csv", header = T)
+NEFSC_CarbChem <- read.csv(file="Data/Seawater_chemistry/NEFSC_Milford_CarbChem.csv", header = T)
+
+```
+
+
+```{r}
+metadata_treatment <- metadata[,c(1:4)]
+colnames(metadata_treatment) <- c("Tank_num","Temp_treat","OA_treat","Color")
+metadata_treatment$Tank_num <- as.numeric(metadata_treatment$Tank_num)
+
+NEFSC_CarbChem.NAom <- NEFSC_CarbChem[!is.na(NEFSC_CarbChem$WAr.out),] # oit rows with AR as NA, not completed yet!
+NEFSC_CarbChem.trunc <- NEFSC_CarbChem.NAom[,c(1:3,8,10:12, 14,16,25:27)] %>% 
+                            mutate(Date = lubridate::mdy(Date),
+                                   Tank_num = as.numeric(stringr::str_split(Sample.ID, "-", simplify = TRUE)[, 2]))
+                            
+colnames(NEFSC_CarbChem.trunc) <- c("Date","Sample.ID","Salinty","Temperature",
+                                    "TA.umolkgSW","TCO2.umolkgSW","pH.chosenscale","pH_out",
+                                    "pCO2_out.uatm","WCA_out","WAr_out","pCO2_out1atm.ppm", "Tank_num")                                
+NEFSC_CarbChem.meta <- merge(NEFSC_CarbChem.trunc,
+                             metadata_treatment,
+                             by = 'Tank_num')
+
+
+Rmisc::summarySE(NEFSC_CarbChem.meta, groupvars = c('Temp_treat', 'OA_treat'), measurevar = 'WAr_out')
+Rmisc::summarySE(NEFSC_CarbChem.meta, groupvars = c('Temp_treat', 'OA_treat'), measurevar = 'pCO2_out.uatm')
+Rmisc::summarySE(NEFSC_CarbChem.meta, groupvars = c('Temp_treat', 'OA_treat'), measurevar = 'Temperature')
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```

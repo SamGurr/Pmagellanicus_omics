@@ -49,8 +49,9 @@ treatment_metadata <- read.csv(file="C:/Users/samjg/Documents/Github_repositorie
 sample_metadata    <- read.csv(file="C:/Users/samjg/Documents/Github_repositories/Pmagellanicus_omics/RAnalysis/Data/Experiment_metadata/Sample_metadata.csv", header = TRUE) %>% dplyr::select(-c(TagSeq_ID, ATACseq_ID))
 
 metadata <- merge(treatment_metadata, sample_metadata) 
+metadata %>% group_by(OA, Temperature, Tag_color) %>% summarise(n = n())
 
-final <- merge(data, metadata) %>% 
+final <- merge(data, metadata, by = "flow_cy_ID") %>% 
           dplyr::select(Date, Day, 
                         Tank_num, Color, Tag_color,
                         Temperature, OA,
@@ -62,14 +63,16 @@ final <- merge(data, metadata) %>%
                           paste0(Temperature,'_X_', OA))
 
 final_OM <- final %>% # data %>%
-  dplyr::filter(!flow_cy_ID %in% c(3,8,11,18,21,27)) %>%
-  dplyr::filter(!(population %in% 'Hurricane' & Proportion_alive_ADJ < 0.18)) %>% 
+  # dplyr::filter(!flow_cy_ID %in% c(3,8,11,18,21,27)) %>%
+  # dplyr::filter(!(population %in% 'Hurricane' & Proportion_alive_ADJ < 0.18)) %>% 
   dplyr::mutate(OA_Pop = paste0(OA,"_",population),
                 Arag  = case_when(
                   (Temperature %in% 'High' & OA %in% 'Low') ~ 1,
                   (Temperature %in% 'Low' & OA %in% 'Low') ~ 2,
                   (Temperature %in% 'High' & OA %in% 'High') ~ 3,
                   (Temperature %in% 'Low' & OA %in% 'High') ~ 4))
+
+final_OM %>% group_by(population,OA,Temperature) %>% dplyr::summarise(n=n())
 ```
 
 
@@ -200,13 +203,13 @@ TwoWaymod <- aov(
 
 shapiro.test(residuals(TwoWaymod))
 # data:  residuals(TwoWaymod)
-# W = 0.98774, p-value = 0.965 
+# W = 0.98186, p-value = 0.7581
 summary(TwoWaymod)
-#                            Df  Sum Sq Mean Sq F value Pr(>F)  
-# as.factor(Arag)             3 0.12002 0.04001   3.197 0.0407 *
-# population                  1 0.01484 0.01484   1.186 0.2865  
-# as.factor(Arag):population  3 0.03972 0.01324   1.058 0.3845  
-# Residuals                  25 0.31284 0.01251  
+#                            Df Sum Sq  Mean Sq F value Pr(>F)
+# as.factor(Arag)             3 0.0757 0.025219   1.175  0.342
+# population                  1 0.0156 0.015647   0.729  0.402
+# as.factor(Arag):population  3 0.0270 0.009008   0.420  0.741
+# Residuals                  22 0.4721 0.021457 
 
 Cobscook_mod <- lm(
                     Proportion_alive_ADJ ~
@@ -214,7 +217,7 @@ Cobscook_mod <- lm(
                       as.factor(Arag) ,
                     data = (final_OM %>% # data %>%
                               dplyr::filter(population %in% 'Cobscook')))
-shapiro.test(resid(Cobscook_mod)) # 0.9766
+shapiro.test(resid(Cobscook_mod)) # 0.1339
 leveneTest(Cobscook_mod) # 0.2714
 summary(Cobscook_mod)
 summary(
@@ -241,13 +244,13 @@ Cobscook_Twoway <- lm(
                     data = (final_OM %>% # data %>%
                     dplyr::filter(population %in% 'Cobscook'))
                       )
-shapiro.test(resid(Cobscook_Twoway)) # 0.9766
+shapiro.test(resid(Cobscook_Twoway)) # 0.1339
 summary(Cobscook_Twoway)
 #                      Estimate Std. Error t value Pr(>|t|)    
-# (Intercept)           0.40358    0.05987   6.741 9.46e-06 ***
-# TemperatureLow       -0.01654    0.08981  -0.184    0.857    
-# OALow                 0.08726    0.08467   1.031    0.320    
-# TemperatureLow:OALow -0.08749    0.12701  -0.689    0.502 
+# (Intercept)           0.39364    0.07449   5.285 0.000115 ***
+# TemperatureLow       -0.05652    0.11173  -0.506 0.620820    
+# OALow                 0.06406    0.10534   0.608 0.552842    
+# TemperatureLow:OALow -0.06324    0.15801  -0.400 0.695032 
 
 Cobscook_Oneway <- lm(
                     Proportion_alive_ADJ ~
@@ -255,8 +258,8 @@ Cobscook_Oneway <- lm(
                     data = (final_OM %>% # data %>%
                     dplyr::filter(population %in% 'Cobscook'))
                       )
-shapiro.test(resid(Cobscook_Oneway)) # 0.9766
-leveneTest(Cobscook_Oneway) # 0.2195
+shapiro.test(resid(Cobscook_Oneway)) # 0.1339
+leveneTest(Cobscook_Oneway) # 0.5247
 
 
 
@@ -269,13 +272,13 @@ Hurricane_Twoway <- lm(
                     data = (final_OM %>% # data %>%
                     dplyr::filter(population %in% 'Hurricane'))
                       )
-shapiro.test(resid(Hurricane_Twoway)) # 0.821
+shapiro.test(resid(Hurricane_Twoway)) # 0.9996
 summary(Hurricane_Twoway)
-#                       Estimate Std. Error t value Pr(>|t|)    
-# (Intercept)           0.454113   0.033550  13.535 3.34e-08 ***
-# TemperatureLow       -0.166758   0.050326  -3.314  0.00691 ** 
-# OALow                 0.004154   0.054788   0.076  0.94092    
-# TemperatureLow:OALow -0.028600   0.079277  -0.361  0.72511
+#                      Estimate Std. Error t value Pr(>|t|)    
+# (Intercept)           0.41069    0.04573   8.980 1.88e-05 ***
+# TemperatureLow       -0.08406    0.08556  -0.982    0.355    
+# OALow                -0.04855    0.07468  -0.650    0.534    
+# TemperatureLow:OALow -0.07617    0.12663  -0.602    0.564 
 
 Hurricane_Oneway <- lm(
                     Proportion_alive_ADJ ~
@@ -283,9 +286,14 @@ Hurricane_Oneway <- lm(
                     data = (final_OM %>% # data %>%
                     dplyr::filter(population %in% 'Hurricane'))
                       )
-shapiro.test(resid(Hurricane_Oneway)) # 0.821
-leveneTest(Hurricane_Oneway) # 0.3932
-?emmeans
+shapiro.test(resid(Hurricane_Oneway)) # 0.9996
+leveneTest(Hurricane_Oneway) # 0.708
+summary(Hurricane_Oneway)
+#                     Estimate Std. Error t value Pr(>|t|)    
+# (Intercept)          0.41069    0.04573   8.980 1.88e-05 ***
+# treatmentHigh_X_Low -0.04855    0.07468  -0.650   0.5338    
+# treatmentLow_X_High -0.08406    0.08556  -0.982   0.3547    
+# treatmentLow_X_Low  -0.20878    0.08556  -2.440   0.0406 *  
 mod_means_contr <- emmeans::emmeans(object = Hurricane_mod,
                                     pairwise ~ "treatment",
                                     adjust = "tukey")
